@@ -11,13 +11,13 @@ window.addEventListener("load", () => {
   try {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    let idUser = urlParams.get("user_name");
+    let idUser = urlParams.get("name");
     0;
     if (idUser) {
-      localStorage.setItem("user_name", idUser);
+      localStorage.setItem("name", idUser);
       window.history.pushState({}, document.title, window.location.pathname);
     } else {
-      idUser = localStorage.getItem("user_name");
+      idUser = localStorage.getItem("name");
     }
     if (idUser) {
       const nameInvitee = data.filter((invitee) => {
